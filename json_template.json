@@ -1,0 +1,46 @@
+{
+	"clusterConfiguration": {
+		"profileModeCode":"a",
+		"instanceType":"a",
+		"stretchedCluster": false,
+		"cpuHeadroom": 15,
+		"hostFailureToTolerate": 0,
+		"faultToleranceMethod": "auto"
+	},
+	"workloads": [{
+		"vmProfile": {
+			"vCpusPerVM":1,
+			"vCpusPerCore": 1,
+			"vRAMPerVM": {
+				"value":1,
+				"units": "GB"
+			},
+			"vmsNum": 1,
+			"vmdkSize": {
+				"value": 1,
+				"units": "GB"
+			},
+			"targetRAMRatio": 1,
+			"dedupOrCompressionRatio": 1,
+			"resourceUtilization": {
+				"cpuUtilization": {
+					"value": 1,
+					"units": "%"
+				},
+				"memoryUtilization": {
+					"value": 100,
+					"units": "%"
+				}
+			},
+			"iopsPerVM": 50,
+			"ioProfile": {
+				"ioAccessPattern": "Random",
+				"blockSizeInKB": 4,
+				"ioRatios": "70/30"
+			}
+		},
+		"workloadCategory": "GPW",
+		"workloadType": "GVM",
+		"workloadName": "Workload Profile"
+	}]
+}
